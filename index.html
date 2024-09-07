@@ -3,36 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos de Julián - IA</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Predicción de lluvia en Australia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>Proyectos de Inteligencia Artificial de Julián</h1>
-        <nav>
-            <ul>
-                <li><a href="#chatbot">Chatbot NLP</a></li>
-                <li><a href="#rain-prediction">Predicción de Lluvia</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="chatbot">
-            <h2>Chatbot NLP con RAG</h2>
-            <!-- Aquí irá la interfaz del chatbot -->
-        </section>
-        
-        <section id="rain-prediction">
-            <h2>Predicción de Lluvia en Australia</h2>
-            <!-- Aquí irá la interfaz de predicción de lluvia -->
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 Julián. Todos los derechos reservados.</p>
-    </footer>
-    
-    <script src="script.js"></script>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-4">Predicción de lluvia en Australia</h1>
+        <p class="mb-4">Esta aplicación predice la probabilidad de lluvia en Australia basada en diversos factores meteorológicos.</p>
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <h2 class="text-xl font-semibold mb-4">Acceder a la aplicación</h2>
+            <p class="mb-4">Para usar la aplicación de predicción de lluvia, haz clic en el botón de abajo:</p>
+            <a href="https://tu-app-streamlit.herokuapp.com" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Ir a la aplicación
+            </a>
+        </div>
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8">
+            <h2 class="text-xl font-semibold mb-4">Acerca del proyecto</h2>
+            <p>Este proyecto utiliza modelos de aprendizaje automático para predecir la probabilidad de lluvia en Australia basándose en datos históricos y condiciones meteorológicas actuales.</p>
+        </div>
+    </div>
 </body>
 </html>

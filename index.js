@@ -1,12 +1,10 @@
-// Funcionalidad del Chatbot
+// Funcionalidad del Chatbot (sin cambios)
 function sendMessage() {
     const userInput = document.getElementById('user-input').value;
     const chatbox = document.getElementById('chatbox');
     
-    // Agregar mensaje del usuario
     chatbox.innerHTML += `<p><strong>Tú:</strong> ${userInput}</p>`;
     
-    // Simular respuesta del chatbot (aquí conectarías con tu modelo real)
     setTimeout(() => {
         chatbox.innerHTML += `<p><strong>Chatbot:</strong> Esta es una respuesta simulada.</p>`;
     }, 1000);
@@ -14,15 +12,33 @@ function sendMessage() {
     document.getElementById('user-input').value = '';
 }
 
-// Funcionalidad de Predicción de Lluvia
-function predictRain() {
+// Funcionalidad de Predicción de Lluvia actualizada
+async function predictRain() {
     const location = document.getElementById('location').value;
     const result = document.getElementById('prediction-result');
     
-    // Simular predicción (aquí conectarías con tu modelo real)
-    setTimeout(() => {
-        result.textContent = `Predicción para ${location}: 70% de probabilidad de lluvia.`;
-    }, 1000);
+    result.textContent = 'Calculando predicción...';
+    
+    try {
+        // Aquí debes reemplazar la URL con la de tu servicio real
+        const response = await fetch('https://tu-servicio-de-prediccion.com/predict', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ location: location }),
+        });
+        
+        if (!response.ok) {
+            throw new Error('Error en la predicción');
+        }
+        
+        const data = await response.json();
+        result.textContent = `Predicción para ${location}: ${data.prediction}`;
+    } catch (error) {
+        result.textContent = 'Error al obtener la predicción. Por favor, intenta de nuevo.';
+        console.error('Error:', error);
+    }
 }
 
 // Cargar interfaces cuando el DOM esté listo
