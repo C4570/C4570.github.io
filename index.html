@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barra de Búsqueda</title>
+    <title>Proyectos de Julián - IA</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Barra de Búsqueda</h1>
-        <input type="text" id="searchInput" placeholder="Buscar...">
-        <button onclick="search()">Buscar</button>
+        <h1>Proyectos de Inteligencia Artificial de Julián</h1>
+        <nav>
+            <ul>
+                <li><a href="#chatbot">Chatbot NLP</a></li>
+                <li><a href="#rain-prediction">Predicción de Lluvia</a></li>
+            </ul>
+        </nav>
     </header>
+    
     <main>
-        <!-- Aquí puedes agregar el contenido principal de tu página -->
+        <section id="chatbot">
+            <h2>Chatbot NLP con RAG</h2>
+            <!-- Aquí irá la interfaz del chatbot -->
+        </section>
+        
+        <section id="rain-prediction">
+            <h2>Predicción de Lluvia en Australia</h2>
+            <!-- Aquí irá la interfaz de predicción de lluvia -->
+        </section>
     </main>
+    
     <footer>
-        <!-- Aquí puedes agregar el pie de página -->
+        <p>&copy; 2024 Julián. Todos los derechos reservados.</p>
     </footer>
-    <script>
-        function search() {
-            // Aquí puedes agregar la lógica para procesar la búsqueda
-            var searchTerm = document.getElementById("searchInput").value;
-            alert("Realizando búsqueda: " + searchTerm);
-            // Puedes redirigir a otra página o mostrar los resultados en esta misma página
-        }
-    </script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
